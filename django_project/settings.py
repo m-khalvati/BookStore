@@ -142,7 +142,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # django-allauth config
 LOGIN_REDIRECT_URL = "home"
-ACCOUNT_LOGOUT_REDIRECT = "home"  # new
+ACCOUNT_LOGOUT_REDIRECT = "home"
 SITE_ID = 1
 AUTHENTICATION_BACKENDS = (
     "django.contrib.auth.backends.ModelBackend",
@@ -160,7 +160,7 @@ ACCOUNT_UNIQUE_EMAIL = True
 
 DEFAULT_FROM_EMAIL = "admin@djangobookstore.com"
 
-MEDIA_URL = "/media/"  # new
+MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
 # django-debug-toolbar
@@ -178,3 +178,5 @@ SECURE_HSTS_PRELOAD = env.bool("DJANGO_SECURE_HSTS_PRELOAD", default=True)
 
 SESSION_COOKIE_SECURE = env.bool("DJANGO_SESSION_COOKIE_SECURE", default=True)
 CSRF_COOKIE_SECURE = env.bool("DJANGO_CSRF_COOKIE_SECURE", default=True)
+
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
