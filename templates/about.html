@@ -1,7 +1,119 @@
 {% extends "_base.html" %}
+{% load static %}
 
-{% block title %}About{% endblock title %}
+{% block title %}About Us - Bookstore{% endblock title %}
 
 {% block content %}
-  <h1>About Page</h1>
+<!-- Hero Section -->
+<div class="p-5 mb-5 bg-navy text-white rounded-3 shadow-sm text-center">
+  <div class="container py-3">
+    <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-semibold mb-3">Our Story</span>
+    <h1 class="display-4 fw-bold text-white mb-3">Passionate About Books & Knowledge</h1>
+    <p class="col-md-8 mx-auto fs-5 text-white-50">
+      We believe that books have the power to transform lives, spark innovation, and build connected communities.
+    </p>
+  </div>
+</div>
+
+<!-- Mission & Vision Cards -->
+<div class="row g-4 mb-5">
+  <div class="col-md-6">
+    <div class="card h-100 border-0 shadow-sm p-4">
+      <div class="d-flex align-items-center mb-3">
+        <div class="bg-warning bg-opacity-20 p-3 rounded-circle text-warning me-3">
+          <i class="bi bi-compass fs-2"></i>
+        </div>
+        <h3 class="h4 fw-bold mb-0 text-dark">Our Mission</h3>
+      </div>
+      <p class="text-secondary leading-relaxed mb-0">
+        To empower readers and technical professionals worldwide by providing access to high-quality books, comprehensive documentation, and seamless digital reading experiences.
+      </p>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card h-100 border-0 shadow-sm p-4">
+      <div class="d-flex align-items-center mb-3">
+        <div class="bg-warning bg-opacity-20 p-3 rounded-circle text-warning me-3">
+          <i class="bi bi-eye fs-2"></i>
+        </div>
+        <h3 class="h4 fw-bold mb-0 text-dark">Our Vision</h3>
+      </div>
+      <p class="text-secondary leading-relaxed mb-0">
+        To build a global platform where authors and readers seamlessly connect, fostering learning and knowledge sharing across technology, literature, and science.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Statistics Counter Section -->
+<div class="card border-0 shadow-sm mb-5 bg-light p-4">
+  <div class="row text-center g-4">
+    <div class="col-6 col-md-3">
+      <h2 class="display-6 fw-bold text-warning mb-1">10k+</h2>
+      <p class="text-muted small mb-0">Active Readers</p>
+    </div>
+    <div class="col-6 col-md-3">
+      <h2 class="display-6 fw-bold text-warning mb-1">1,500+</h2>
+      <p class="text-muted small mb-0">Books Available</p>
+    </div>
+    <div class="col-6 col-md-3">
+      <h2 class="display-6 fw-bold text-warning mb-1">200+</h2>
+      <p class="text-muted small mb-0">Verified Authors</p>
+    </div>
+    <div class="col-6 col-md-3">
+      <h2 class="display-6 fw-bold text-warning mb-1">4.9★</h2>
+      <p class="text-muted small mb-0">User Rating</p>
+    </div>
+  </div>
+</div>
+
+<!-- Key Features Grid -->
+<div class="mb-5">
+  <div class="text-center mb-4">
+    <h2 class="fw-bold text-dark">Why Readers Choose Us</h2>
+    <p class="text-muted">Built for speed, simplicity, and endless discovery</p>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100 border-0 shadow-sm p-3 text-center">
+        <div class="card-body">
+          <i class="bi bi-lightning-charge fs-1 text-warning mb-3 d-block"></i>
+          <h5 class="fw-bold mb-2">Instant Delivery</h5>
+          <p class="text-muted small mb-0">Get immediate access to digital formats as soon as you confirm your order.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 border-0 shadow-sm p-3 text-center">
+        <div class="card-body">
+          <i class="bi bi-shield-check fs-1 text-warning mb-3 d-block"></i>
+          <h5 class="fw-bold mb-2">Curated Selection</h5>
+          <p class="text-muted small mb-0">Every book in our store undergoes review to ensure accurate and high-value content.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 border-0 shadow-sm p-3 text-center">
+        <div class="card-body">
+          <i class="bi bi-chat-quote fs-1 text-warning mb-3 d-block"></i>
+          <h5 class="fw-bold mb-2">Active Community</h5>
+          <p class="text-muted small mb-0">Read genuine reviews and engage with fellow readers from around the globe.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Call to Action -->
+<div class="p-5 bg-navy text-white rounded-3 shadow-sm text-center">
+  <h2 class="fw-bold mb-3">Ready to Start Reading?</h2>
+  <p class="text-white-50 mb-4">Explore our full catalog and find your next great read today.</p>
+  <a href="{% url 'book_list' %}" class="btn btn-warning btn-lg fw-medium text-dark px-4">
+    Browse All Books <i class="bi bi-arrow-right ms-2"></i>
+  </a>
+</div>
 {% endblock content %}
